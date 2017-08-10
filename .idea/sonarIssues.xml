@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/WeekCalendar.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/adapter/MonthPagerAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/adapter/WeekPagerAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/decorator/decoratorimpl/DefaultDayDecorator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/decorator/decoratorimpl/DefaultMonthDecorator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/decorator/decoratorimpl/DefaultWeekDecorator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/fragment/MonthFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/fragment/WeekFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/utils/CalendarUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/views/MonthPager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/views/WeekPager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/full_month_view_height">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@android:color/darker_gray"/>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        android:layout_marginBottom="1dp"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/calendar_title_padding_bottom"
+        android:paddingTop="@dimen/calendar_title_padding_top">
+
+        <ImageView android:id="@+id/left_header_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="false"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/back_arrow"
+            tools:ignore="contentDescription"/>
+
+        <TextView android:id="@+id/date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:tag="dateTitle" />
+
+        <ImageView android:id="@+id/right_header_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="false"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/padding"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/right_arrow"
+            tools:ignore="contentDescription"/>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@android:color/darker_gray"/>
+</LinearLayout>

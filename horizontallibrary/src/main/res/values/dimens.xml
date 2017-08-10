@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- dateTitleLayout -->
+    <dimen name="date_title_text_size">18sp</dimen>
+    <dimen name="day_of_week_text_size">16sp</dimen>
+    <!-- weekRowLayout -->
+    <!-- Day of the month -->
+    <dimen name="underline_weight">6dp</dimen>
+    <dimen name="underline_height">2dp</dimen>
+    <dimen name="day_of_month_background_size">32dp</dimen>
+    <dimen name="day_of_month_indicator_size">3dp</dimen>
+    <dimen name="day_of_month_image_margin_top">20dp</dimen>
+    <dimen name="padding">8dp</dimen>
+
+    <!--New dimens-->
+    <dimen name="calendar_title_padding_top">8dp</dimen>
+    <dimen name="calendar_title_padding_bottom">8dp</dimen>
+    <dimen name="week_title_padding_top">8dp</dimen>
+    <dimen name="week_title_padding_bottom">8dp</dimen>
+    <dimen name="min_day_cell_height">40dp</dimen>
+
+    <dimen name="actionbar_size">56dp</dimen>
+
+    <dimen name="day_text_wh">20dp</dimen>
+    <dimen name="day_text_bg_h_w">20dp</dimen>
+    <dimen name="full_day_text_width">45dp</dimen>
+    <dimen name="full_month_view_height">48dp</dimen>
+    <dimen name="full_week_view_height">58dp</dimen>
+    <dimen name="full_hours_text_height">50dp</dimen>
+    <dimen name="full_hours_text_margin">20dp</dimen>
+    <dimen name="hours_text_size">20sp</dimen>
+    <dimen name="padding_hour_from_check">15dp</dimen>
+    <dimen name="check_icon_bound">20dp</dimen>
+
+</resources>

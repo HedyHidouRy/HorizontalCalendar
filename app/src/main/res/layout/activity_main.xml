@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hedyhidoury.calendar.horizontalcalendar.MainActivity">
+
+    <com.hedyhidoury.calendar.horizontallibrary.WeekCalendar
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        app:dayNameLength="threeLetters"
+        app:selectedBgColor="#89cacf"
+        app:todaysDateBgColor="#89cacf"
+        app:calendarBgColor="@android:color/white"
+        app:numOfPages="150"
+        app:daysTextColor="@android:color/black"
+        app:weekTypeFace="museosans.otf"
+        app:headerTypeFace="MuseoSans_700.otf"
+        app:headerPreviousIcon="@drawable/ic_backward"
+        app:headerForwardIcon="@drawable/ic_forward"
+        app:weekForwardIcon="@drawable/ic_forward"
+        app:weekPreviousIcon="@drawable/ic_backward"
+        app:hoursTypeFace="MuseoSans_500.otf"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"></com.hedyhidoury.calendar.horizontallibrary.WeekCalendar>
+
+</android.support.constraint.ConstraintLayout>
