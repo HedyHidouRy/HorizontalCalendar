@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.res.TypedArrayUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,21 +29,23 @@ import com.squareup.otto.Subscribe;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 
-/**
- * Created by nor on 12/4/2015.
- */
+import static com.hedyhidoury.calendar.horizontallibrary.HorizontalCalendarView.inValidatedDays;
+import static com.hedyhidoury.calendar.horizontallibrary.utils.CalendarUtils.selectedDateTime;
+
 public class WeekFragment extends Fragment {
     public static String DATE_KEY = "date_key";
     private GridView gridView;
     private ImageView previousWeekImage;
     private ImageView forwardWeekImage;
     private WeekAdapter weekAdapter;
-    public static DateTime selectedDateTime = new DateTime();
-    public static DateTime CalendarStartDate = new DateTime(); // calendar start date, actual date
+    private static boolean isDateSelected = false;
+    public static DateTime CalendarStartDate = new DateTime();   // calendar start date, actual date
     private DateTime startDate; // start date of the week
     private DateTime endDate; // end date of the week
     private boolean isVisible;
@@ -86,10 +89,16 @@ public class WeekFragment extends Fragment {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                BusProvider.getInstance().post(new Event.OnDateClickEvent(weekAdapter.getItem
-                        (position)));
-                selectedDateTime = weekAdapter.getItem(position);
-                BusProvider.getInstance().post(new Event.InvalidateEvent());
+                // if item clicked is not in the invalidated dates, make necessary changes
+                if(!inValidatedDays.contains(position + 1)){
+                    BusProvider.getInstance().post(new Event.OnDateClickEvent(weekAdapter.getItem
+                            (position)));
+                    isDateSelected = true;
+                    selectedDateTime = weekAdapter.getItem(position);
+                    BusProvider.getInstance().post(new Event.InvalidateEvent());
+
+                }
+
             }
         });
 
@@ -153,6 +162,10 @@ public class WeekFragment extends Fragment {
         super.setUserVisibleHint(isVisibleToUser);
     }
 
+    /**
+     * Week adapter for drawing days of the week
+     * Taking responsablity of every change
+     */
     public class WeekAdapter extends BaseAdapter {
         private ArrayList<DateTime> days;
         private Context context;
@@ -197,10 +210,17 @@ public class WeekFragment extends Fragment {
             // set the day name with 2 chars with first one as uppercase
             DateTime.Property pDoW = dateTime.dayOfWeek();
             String dayName = pDoW.getAsText(Locale.getDefault()).substring(0,2);
+            // // TODO: 8/17/2017 make day name view on decorator
             dayNameView.setText(dayName.substring(0, 1).toUpperCase()+dayName.substring(1));
+            if(inValidatedDays.contains(position + 1)){
+                BusProvider.getInstance().post(new Event.OnDayDecorateEvent(convertView, dayTextView,dayNameView,
+                        dateTime, firstDay, selectedDateTime,true));
+                dayNameView.setTextColor(getResources().getColor(R.color.invalidate_day));
+            }else{
+                BusProvider.getInstance().post(new Event.OnDayDecorateEvent(convertView, dayTextView,dayNameView,
+                        dateTime, firstDay, selectedDateTime,false));
+            }
 
-            BusProvider.getInstance().post(new Event.OnDayDecorateEvent(convertView, dayTextView,dayNameView,
-                    dateTime, firstDay, WeekFragment.selectedDateTime));
             return convertView;
         }
     }

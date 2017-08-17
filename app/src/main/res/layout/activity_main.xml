@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.hedyhidoury.calendar.horizontalcalendar.MainActivity">
 
-    <!--<com.hedyhidoury.calendar.horizontallibrary.WeekCalendar
-        android:layout_width="368dp"
+    <com.hedyhidoury.calendar.horizontallibrary.HorizontalCalendarView
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:dayNameLength="threeLetters"
         app:selectedBgColor="#89cacf"
@@ -23,6 +24,6 @@
         app:weekPreviousIcon="@drawable/ic_backward"
         app:hoursTypeFace="MuseoSans_500.otf"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp"></com.hedyhidoury.calendar.horizontallibrary.WeekCalendar>
--->
+        tools:layout_editor_absoluteX="8dp"></com.hedyhidoury.calendar.horizontallibrary.HorizontalCalendarView>
+
 </LinearLayout>

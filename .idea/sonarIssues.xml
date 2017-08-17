@@ -3,7 +3,22 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/hedyhidoury/calendar/horizontalcalendar/MainActivity.java">
           <value>
             <set />
           </value>
@@ -23,6 +38,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/HorizontalCalendarView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/WeekCalendar.java">
           <value>
             <set />
@@ -34,6 +54,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/adapter/WeekPagerAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/decorator/DayDecorator.java">
           <value>
             <set />
           </value>
@@ -53,12 +78,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/eventbus/Event.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/fragment/MonthFragment.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/fragment/WeekFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/listener/OnDatePickedListener.java">
           <value>
             <set />
           </value>
@@ -74,6 +109,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/horizontallibrary/src/main/java/com/hedyhidoury/calendar/horizontallibrary/views/WeekPager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/horizontallibrary/src/main/res/values/colors.xml">
           <value>
             <set />
           </value>

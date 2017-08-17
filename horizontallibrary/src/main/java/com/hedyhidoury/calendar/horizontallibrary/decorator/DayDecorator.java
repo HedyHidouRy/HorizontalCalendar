@@ -12,4 +12,5 @@ import org.joda.time.DateTime;
  */
 public interface DayDecorator {
     void decorate(View view, TextView dayTextView, TextView dayNameTextView, DateTime dateTime, DateTime firstDayOfTheWeek, DateTime selectedDateTime);
+    void decorateInvalidate(View view, TextView dayTextView, TextView dayNameTextView, DateTime dateTime, DateTime firstDayOfTheWeek, DateTime selectedDateTime);
 }

@@ -14,6 +14,8 @@ import com.squareup.otto.Subscribe;
 
 import org.joda.time.DateTime;
 
+import static com.hedyhidoury.calendar.horizontallibrary.utils.CalendarUtils.selectedDateTime;
+
 /**
  * Created by hidou on 8/2/2017.
  */
@@ -78,8 +80,8 @@ public class MonthPager extends ViewPager {
         });
         setOverScrollMode(OVER_SCROLL_NEVER);
         setCurrentItem(pos);
-        if (WeekFragment.selectedDateTime == null)
-            WeekFragment.selectedDateTime = new DateTime();
+        if (selectedDateTime == null)
+            selectedDateTime = new DateTime();
     }
 
     @Subscribe

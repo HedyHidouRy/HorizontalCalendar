@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="WeekCalendar">
+    <declare-styleable name="HorizontalCalendarView">
         <attr name="numOfPages" format="integer"/>
         <attr name="nbOfMonths" format="integer"/>
         <attr name="daysTextSize" format="dimension"/>

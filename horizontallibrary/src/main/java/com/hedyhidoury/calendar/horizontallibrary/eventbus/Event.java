@@ -110,17 +110,19 @@ public class Event {
         private final TextView dayTextView;
         private final TextView dayNameTextView;
         private final DateTime dateTime;
+        private final boolean invalidate;
         private DateTime firstDay;
         private DateTime selectedDateTime;
 
         public OnDayDecorateEvent(View view, TextView dayTextView, TextView dayNameTextView, DateTime dateTime,
-                                  DateTime firstDayOfTheWeek, DateTime selectedDateTime) {
+                                  DateTime firstDayOfTheWeek, DateTime selectedDateTime, boolean invalidate) {
             this.view = view;
             this.dayTextView = dayTextView;
             this.dateTime = dateTime;
             this.firstDay = firstDayOfTheWeek;
             this.selectedDateTime = selectedDateTime;
             this.dayNameTextView = dayNameTextView;
+            this.invalidate = invalidate;
         }
 
         public View getView() {
@@ -145,6 +147,10 @@ public class Event {
 
         public TextView getDayNameTextView() {
             return dayNameTextView;
+        }
+
+        public boolean isInvalidate() {
+            return invalidate;
         }
     }
 
@@ -189,6 +195,9 @@ public class Event {
         }
     }
 
+    /**
+     * On Month Change, used to scroll for month view
+     */
     public static class OnMonthChange {
 
         private final DateTime monthDay;
@@ -208,6 +217,9 @@ public class Event {
         }
     }
 
+    /**
+     * If Week view swipe requested
+     */
     public static class OnSwipeWeekRequested {
 
         private final boolean forward;
@@ -221,6 +233,9 @@ public class Event {
         }
     }
 
+    /**
+     * On Month Swipe requested
+     */
     public static class OnSwipeMonthRequested {
 
         private final boolean forward;

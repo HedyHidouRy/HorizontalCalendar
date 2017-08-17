@@ -22,6 +22,8 @@ import org.joda.time.DateTime;
 import org.joda.time.DateTimeConstants;
 import org.joda.time.Weeks;
 
+import static com.hedyhidoury.calendar.horizontallibrary.utils.CalendarUtils.selectedDateTime;
+
 
 public class WeekPager extends ViewPager {
     private WeekPagerAdapter adapter;
@@ -47,7 +49,7 @@ public class WeekPager extends ViewPager {
         post(new Runnable() {
             @Override
             public void run() {
-                //Force rerendering so the week is drawn again when you return to the view after
+                // Force rerendering so the week is drawn again when you return to the view after
                 // back button press.
                 if (adapter != null) {
                     adapter.notifyDataSetChanged();
@@ -56,7 +58,10 @@ public class WeekPager extends ViewPager {
         });
     }
 
-
+    /**
+     * Initialize number of weeks
+     * @param numOfWeeks
+     */
     private void initialize(int numOfWeeks) {
         NUM_OF_PAGES = numOfWeeks;
         if (!isInEditMode()) {
@@ -65,6 +70,10 @@ public class WeekPager extends ViewPager {
         }
     }
 
+    /**
+     * Initiate pager
+     * @param dateTime
+     */
     private void initPager(DateTime dateTime) {
         pos = NUM_OF_PAGES / 2;
         adapter = new WeekPagerAdapter(((AppCompatActivity) getContext())
@@ -87,8 +96,8 @@ public class WeekPager extends ViewPager {
         setOverScrollMode(OVER_SCROLL_NEVER);
         setCurrentItem(pos);
 
-        if (WeekFragment.selectedDateTime == null)
-            WeekFragment.selectedDateTime = new DateTime();
+        if (selectedDateTime == null)
+            selectedDateTime = new DateTime();
     }
 
     @Subscribe
@@ -116,14 +125,14 @@ public class WeekPager extends ViewPager {
 
     @Subscribe
     public void reset(Event.ResetEvent event) {
-        WeekFragment.selectedDateTime = new DateTime(WeekFragment.CalendarStartDate);
+        selectedDateTime = new DateTime(WeekFragment.CalendarStartDate);
         //WeekFragment.CalendarStartDate = new DateTime();
         initPager(WeekFragment.CalendarStartDate);
     }
 
     @Subscribe
     public void setSelectedDate(Event.SetSelectedDateEvent event) {
-        WeekFragment.selectedDateTime = event.getSelectedDate();
+        selectedDateTime = event.getSelectedDate();
         initPager(event.getSelectedDate());
     }
 
@@ -135,7 +144,7 @@ public class WeekPager extends ViewPager {
     @Subscribe
     public void setStartDate(Event.SetStartDateEvent event) {
         WeekFragment.CalendarStartDate = event.getStartDate();
-        WeekFragment.selectedDateTime = event.getStartDate();
+        selectedDateTime = event.getStartDate();
         initPager(event.getStartDate());
     }
 

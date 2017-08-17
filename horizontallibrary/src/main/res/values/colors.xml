@@ -3,8 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="hours_bg_checked">#E8EEEF</color>
+    <color name="hours_bg_checked">#1A89CACF</color>
     <color name="hours_bg_pressed">#EFEFEF</color>
     <color name="divider">#666666</color>
-
+    <color name="invalidate_day">#666666</color>
 </resources>

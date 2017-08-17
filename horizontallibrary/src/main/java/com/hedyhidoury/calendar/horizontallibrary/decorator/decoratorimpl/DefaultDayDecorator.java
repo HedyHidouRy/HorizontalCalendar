@@ -83,13 +83,26 @@ public class DefaultDayDecorator implements DayDecorator {
                 dayTextView.setBackground(null);
             }
         }
-
+        // testing to see if selected date ot not
         if (dateTime.toLocalDate().equals(calendarStartDate.toLocalDate())) {
             dayTextView.setBackground(solidCircle);
             dayTextView.setTextColor(this.todayDateTextColor);
         } else {
             dayTextView.setTextColor(textColor);
         }
+        float size = textSize;
+        if (size == -1)
+            size = dayTextView.getTextSize();
+        dayTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
+        dayTextView.setTypeface(weekTypeFace);
+        dayNameTextView.setTypeface(weekTypeFace);
+    }
+
+    @Override
+    public void decorateInvalidate(View view, TextView dayTextView, TextView dayNameTextView, DateTime dateTime, DateTime firstDayOfTheWeek, DateTime selectedDateTime) {
+
+        dayTextView.setTextColor(context.getResources().getColor(R.color.invalidate_day));
+
         float size = textSize;
         if (size == -1)
             size = dayTextView.getTextSize();
