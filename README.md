@@ -3,7 +3,7 @@ Android Horizontal Calendar
 
 **Android Horizontal Calendar** is an Android library to display of full calendar ( especially to take exact appointement ). It supports custom styling.
 
-![](images/screen-shot.png)
+![](images/screen-shot.gif)
 
 Features
 ------------
